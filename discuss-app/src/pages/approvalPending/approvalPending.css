@@ -1,0 +1,458 @@
+.approvalPendingCustom {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.approvaltitle {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.searchContainerApproval {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.searchWrapperApproval {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.containerApproval {
+  display: grid;
+  grid-template-rows: auto auto;
+  gap: 20px;
+  background: #e9f0f1;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ddd;
+}
+
+.searchContainerApproval input {
+  padding: 10px 8px 10px 30px;
+  border: 1px solid #ced4da;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.searchContainerApproval input:focus {
+  border-color: #007bff;
+}
+
+.searchIconApproval {
+  position: absolute;
+  left: 10px;
+  color: #495057;
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.searchContainerApproval .bulkApproveButtonApproval {
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+  border: 2px solid black;
+  margin-bottom: 10px;
+}
+
+.bulkApproveButtonApproval:hover {
+  background: #e9ebed;
+  color: #007bff;
+  border: 2px solid #71787e;
+}
+
+.bulkApproveButtonApproval:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.loadingContainerApproval {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.loadingMessageApproval {
+  text-align: center;
+  color: #555;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.spinnerApproval {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #007bff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spinApproval 1s linear infinite;
+}
+
+@keyframes spinApproval {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.tableContainerApproval {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.approvalPendingTable  td input[type="checkbox"] {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.approvalPendingTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(179, 151, 151);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2.5px solid #a88383;
+}
+
+.approvalPendingTable th, .approvalPendingTable td {
+  padding: 2px 40px;
+  border-bottom: 1px solid #aa9292;
+  border-right: 1px solid #aa9292;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+  height: 35px;
+}
+
+.approvalPendingTable th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 600;
+}
+
+.approvalPendingTable tr:nth-child(even) {
+  background-color: #f0f8fc; 
+}
+
+.approvalPendingTable tr:nth-child(odd) {
+  background-color: #d5dde8; 
+}
+
+
+
+.actionLinkApproval {
+  cursor: pointer;
+  color: #5f4892;
+  text-decoration: none;
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.actionLinkApproval:hover {
+  color: #0674f2;
+}
+
+.actionButtonApproval {
+  cursor: pointer;
+  border: 1px solid transparent;
+  background-color: transparent;
+  padding: 5px 10px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  font-size: 14px;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.approveButtonApproval {
+  color: #28a745;
+}
+
+.approveButtonApproval:hover {
+  background-color: #e9faec;
+  border-color: #28a745;
+}
+
+.rejectButtonApproval {
+  color: #dc3545;
+}
+
+.rejectButtonApproval:hover {
+  background-color: #fae9e9;
+  border-color: #dc3545;
+}
+
+.reasonTextareaApproval {
+  width: 200px;
+  padding: 8px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.paginationContainerApproval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.paginationButtonApproval {
+  padding: 11px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s;
+  margin: 0 5px;
+}
+
+.paginationButtonApproval:hover {
+  background: #0056b3;
+}
+
+.paginationButtonApproval:disabled {
+  background: #cccccc;
+  cursor: not-allowed;
+}
+
+.pageInfoApproval {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 12px 15px; 
+  background-color: #ab9494; 
+  color: #333; 
+  border-radius: 5px; 
+
+}
+
+.noPostsContainerApproval {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.noPostsContentApproval {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff9f0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f0e0d0;
+}
+
+.noPostsEmojiApproval {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #e6a157;
+}
+
+.noPostsMessageApproval {
+  font-size: 1.1em;
+  color: #777;
+  max-width: 300px;
+}
+
+
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .searchContainerApproval {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .searchWrapperApproval {
+    margin-bottom: 10px;
+  }
+
+  .searchContainerApproval input {
+    width: 100%;
+    padding: 8px 8px 8px 30px;
+    font-size: 14px;
+  }
+
+  .searchIconApproval {
+    left: 8px;
+    font-size: 16px;
+  }
+
+  .bulkApproveButtonApproval {
+    width: 100%;
+    padding: 8px 15px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  .approvalPendingTable {
+    font-size: 12px;
+  }
+
+  .approvalPendingTable th,
+  .approvalPendingTable td {
+    padding: 4px 6px;
+    height: 30px;
+  }
+
+  .reasonTextareaApproval {
+    width: 100%;
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .actionLinkApproval {
+    font-size: 12px;
+  }
+
+  .actionButtonApproval {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .paginationButtonApproval {
+    padding: 8px 15px;
+    font-size: 14px;
+  }
+
+  .pageInfoApproval {
+    font-size: 14px;
+    padding: 8px 10px;
+  }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+  .approvaltitle h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .searchWrapperApproval {
+    margin-bottom: 8px;
+  }
+
+  .searchContainerApproval input {
+    font-size: 12px;
+    padding: 6px 6px 6px 25px;
+  }
+
+  .searchIconApproval {
+    left: 6px;
+    font-size: 14px;
+  }
+
+  .bulkApproveButtonApproval {
+    font-size: 12px;
+    padding: 6px 10px;
+    margin-bottom: 6px;
+  }
+
+  .approvalPendingTable {
+    font-size: 10px;
+  }
+
+  .approvalPendingTable th,
+  .approvalPendingTable td {
+    padding: 3px 4px;
+    height: 25px;
+  }
+
+  .approvalPendingTable th:nth-child(3), /* Hide Author */
+  .approvalPendingTable td:nth-child(3),
+  .approvalPendingTable th:nth-child(4), /* Hide Email */
+  .approvalPendingTable td:nth-child(4),
+  .approvalPendingTable th:nth-child(6), /* Hide Event Type 1 */
+  .approvalPendingTable td:nth-child(6),
+  .approvalPendingTable th:nth-child(7), /* Hide Event Type 2 */
+  .approvalPendingTable td:nth-child(7),
+  .approvalPendingTable th:nth-child(8), /* Hide Student Year */
+  .approvalPendingTable td:nth-child(8),
+  .approvalPendingTable th:nth-child(9), /* Hide Image */
+  .approvalPendingTable td:nth-child(9) {
+    display: none;
+  }
+
+  .reasonTextareaApproval {
+    width: 100%;
+    font-size: 10px;
+    padding: 4px;
+  }
+
+  .actionLinkApproval {
+    font-size: 10px;
+  }
+
+  .actionButtonApproval {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .paginationButtonApproval {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .pageInfoApproval {
+    font-size: 12px;
+    padding: 6px 8px;
+  }
+
+  .noPostsMessageApproval {
+    font-size: 1em;
+  }
+
+  .noPostsEmojiApproval {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+
+  .containerApproval {
+    padding: 10px;
+    border: 2px solid #ddd;
+  }
+}
+
+
+@media (max-width: 576px) {
+  .approvalPendingTable th:nth-child(6),
+  .approvalPendingTable td:nth-child(6),
+  .approvalPendingTable th:nth-child(7),
+  .approvalPendingTable td:nth-child(7),
+  .approvalPendingTable th:nth-child(8),
+  .approvalPendingTable td:nth-child(8),
+  .approvalPendingTable th:nth-child(12),
+  .approvalPendingTable td:nth-child(12) {
+    display: none;
+  }
+
+  .actionButtonApproval {
+    padding: 3px 5px;
+    font-size: 14px;
+  }
+}

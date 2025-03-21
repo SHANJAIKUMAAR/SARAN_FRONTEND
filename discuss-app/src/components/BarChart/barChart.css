@@ -1,0 +1,89 @@
+/* BarChart.css */
+canvas {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f8f9fa;
+}
+
+.chart-container {
+  width: 100%;
+  margin: 20px auto;
+}
+
+.chart-title {
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #343a40;
+}
+
+.chartjs-tooltip {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 0.9rem;
+}
+
+.chartjs-legend {
+  margin-top: 10px;
+}
+
+.chartjs-legend ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.chartjs-legend li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.chartjs-legend span {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
+  border-radius: 50%;
+}
+
+/* Responsive styles for tablets */
+@media (max-width: 768px) {
+  .chart-container {
+    width: 90%;
+  }
+}
+
+/* Responsive styles for mobile phones */
+@media (max-width: 480px) {
+  .chart-container {
+    width: 100%; 
+    margin: 15px auto; 
+  }
+
+  .chart-title {
+    font-size: 1rem; 
+    margin-bottom: 8px;
+  }
+
+  
+  .chartjs-tooltip {
+    font-size: 0.8rem;
+    padding: 6px;
+  }
+
+  .chartjs-legend li {
+    margin-right: 5px;
+  }
+
+  .chartjs-legend span {
+    width: 10px;
+    height: 10px;
+    margin-right: 3px;
+  }
+ 
+}

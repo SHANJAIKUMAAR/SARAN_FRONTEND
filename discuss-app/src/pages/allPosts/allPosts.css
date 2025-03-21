@@ -1,0 +1,202 @@
+.allpostsPostsPage {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Arial', sans-serif; 
+    min-height: 370vh;
+  }
+  
+  .allpostsPostsPage span {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: #b5c2c5;
+    color: #212121;
+    border-radius: 8px;
+    font-weight: 600;
+    text-align: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 40px;
+    margin-top: 80px;
+  }
+  
+  .allpostsPostsPage > * {
+    flex-shrink: 0;
+  }
+  
+  .allpostsPostsPage > *:not(:last-child) {
+    margin-bottom: 30px; 
+  }
+  
+  .allpostsTotalPostsContainer {
+    background: linear-gradient(to right, #6a5acd, #483d8b); 
+    color: #ffffff;
+    padding: 30px;
+    border-radius: 15px; 
+    margin: 20px auto;
+    width: fit-content;
+    font-size: 1.6rem;
+    font-weight: 600; 
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .allpostsTotalPostsContainer:hover {
+    transform: translateY(-8px); 
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2); 
+  }
+  
+  .allpostsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin: 20px auto;
+    max-width: 1000px;
+  }
+  
+  .allpostsCountContainer {
+    background: #ffffff;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    height: 180px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid #eee; 
+  }
+  
+  .allpostsCountContainer:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2);
+  }
+  
+  .allpostsCountContainer p {
+    margin: 10px 0;
+    font-size: 1.3rem; 
+  }
+  
+  .allpostsCountContainer p:first-of-type { 
+    color: #cf0e0e; 
+    font-weight: 550;
+  }
+  
+  .allpostsCountContainer p:last-of-type { 
+    color: #2c179a;
+    font-weight: 700;
+  }
+  
+  .allpostsBarChartContainer {
+    width: 80%;
+    max-width: 900px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    margin-bottom: 70px;
+  }
+  
+  .allpostsBarChartContainer canvas {
+    max-width: 100% !important;
+    height: 400px !important; 
+    border-radius: 8px;
+    border: 3px solid #335a72;
+    background-color: #f0f8ff;
+  }
+  
+  
+  h1 {
+    color: #333;
+    margin-bottom: 20px;
+    font-weight: 600;
+  }
+  
+  .allpostsPostsPage {
+    background-color: #f9f9f9; 
+  }
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .allpostsPostsPage {
+    padding: 15px;
+  }
+
+  .allpostsTotalPostsContainer {
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+
+  .allpostsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+    margin: 10px auto;
+  }
+
+  .allpostsCountContainer {
+    padding: 10px;
+  }
+
+  .allpostsCountContainer p {
+    font-size: 0.9rem;
+    margin: 5px 0;
+  }
+
+  .allpostsBarChartContainer canvas {
+    height: 250px !important;
+  }
+
+  .allpostsPostsPage span {
+    margin-bottom: 25px;
+    margin-top: 50px;
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .allpostsPostsPage {
+    padding: 10px;
+  }
+
+  .allpostsTotalPostsContainer {
+    padding: 10px;
+    font-size: 1rem;
+  }
+
+  .allpostsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 8px;
+    margin: 8px auto;
+  }
+
+  .allpostsCountContainer {
+    padding: 8px;
+  }
+
+  .allpostsCountContainer p {
+    font-size: 0.8rem;
+    margin: 3px 0;
+  }
+
+  .allpostsBarChartContainer canvas {
+    height: 200px !important;
+  }
+
+  .allpostsPostsPage span {
+    margin-bottom: 20px;
+    margin-top: 30px;
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+}

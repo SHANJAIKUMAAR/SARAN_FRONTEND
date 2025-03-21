@@ -1,0 +1,411 @@
+
+.usersUsersPage {
+  padding: 20px;
+  font-family: sans-serif;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.usersUsersPage h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #343a40;
+}
+
+.usersUsersPage span {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #b5c2c5;
+  color: #212121;
+  border-radius: 8px;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 50px;
+}
+
+/* Count Grid Section */
+.usersChartInfo {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.usersChartInfo .usersCountContainer {
+  background-color: #f0d4e3;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ac3aa6;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.usersCountContainer:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+.usersCountContainer h3 {
+  font-size: 1.2rem;
+  color: #495057;
+}
+
+.usersCountContainer .usersCountValue {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #007bff;
+}
+
+.usersCountContainer .usersPercentage {
+  font-size: 1.1rem;
+  color: #28a745;
+}
+
+
+/* BarChart Section */
+.usersBarChartContainer {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  margin-bottom: 70px;
+}
+
+
+.usersBarChartContainer canvas {
+  max-width: 100% !important;
+  height: 300px !important; 
+  border-radius: 8px;
+  border: 3px solid #5a8aa8;
+  background-color: #f0f8ff;
+}
+
+
+/* Box Grid and Search */
+.usersBoxgrid {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 3px solid #e0e0e0;
+}
+
+.usersSearchBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.usersSearchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.usersSearchBar input {
+  padding: 10px 8px 10px 30px;
+  border: 2px solid #4d6f8d;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.usersSearchBar input:focus {
+  border-color: #007bff;
+}
+
+.usersSearchIcon {
+  position: absolute;
+  left: 53px; 
+  color: #4d6f8d;
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.usersSearchIcon:hover {
+  color: #0e518d;
+}
+
+
+/* Pagination */
+.usersPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.usersPagination button {
+  padding: 11px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.usersPagination button:hover {
+  background: #72b04f;
+}
+
+.usersPagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.usersPagination span {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0 10px;
+  padding: 12px 15px; 
+  background-color: #94ab9e; 
+  color: #333333; 
+  border-radius: 5px; 
+}
+
+
+/* Table styling */
+.usersTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(179, 151, 151);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2.5px solid #a88383;
+}
+
+.usersTable th,
+.usersTable td {
+  padding: 0 10px;
+  border-bottom: 1px solid #aa9292;
+  border-right: 1px solid #aa9292;
+  text-align: center;
+  font-size: 14px;
+  white-space: nowrap;
+  height: 35px;
+  background-color: white;
+}
+
+.usersTable th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+}
+
+.usersTable tr:hover {
+  background-color: #f5f5f5;
+}
+
+.usertableContainer {
+  overflow-x: auto;
+  margin-bottom: 20px;
+
+}
+
+.usersTable tr:nth-child(even) {
+  background-color: #eef5ff;
+}
+
+.usersTable tr:nth-child(odd) {
+  background-color: #f9f9f9; 
+}
+
+
+/* Responsive adjustments for Tablets */
+@media (max-width: 768px) {
+  .usersUsersPage {
+    padding: 15px;
+  }
+
+  .usersUsersPage h1 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+  }
+
+  .usersUsersPage span h2 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
+  }
+
+  .usersChartInfo {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+  }
+
+  .usersChartInfo .usersCountContainer {
+    padding: 20px;
+  }
+
+  .usersCountContainer h3 {
+    font-size: 1rem;
+  }
+
+  .usersCountContainer .usersCountValue {
+    font-size: 1.5rem;
+  }
+
+  .usersCountContainer .usersPercentage {
+    font-size: 0.9rem;
+  }
+
+  .usersBarChartContainer {
+    width: 95%;
+    margin-bottom: 40px;
+  }
+
+  .usersBarChartContainer canvas {
+    height: 250px !important;
+  }
+
+  .usersBoxgrid {
+    padding: 15px;
+  }
+
+  .usersSearchBar input {
+    padding: 8px 8px 8px 25px;
+    width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .usersSearchIcon {
+    left: 10px;
+    font-size: 1rem;
+  }
+
+  .usertableContainer {
+    margin-bottom: 15px;
+  }
+
+  .usersTable {
+    font-size: 0.8rem;
+  }
+
+  .usersTable th,
+  .usersTable td {
+    padding: 6px 8px;
+    white-space: normal;
+    word-break: break-all;
+  }
+
+  .usersPagination {
+    margin-top: 15px;
+  }
+
+  .usersPagination button {
+    padding: 8px 15px;
+    font-size: 0.9rem;
+  }
+
+  .usersPagination span {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+}
+
+/* Responsive adjustments for Mobile Phones */
+@media (max-width: 480px) {
+  .usersUsersPage {
+    padding: 10px;
+  }
+
+  .usersUsersPage h1 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+
+  .usersUsersPage span h2 {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+  }
+
+  .usersChartInfo {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .usersChartInfo .usersCountContainer {
+    padding: 15px;
+  }
+
+  .usersCountContainer h3 {
+    font-size: 0.9rem;
+  }
+
+  .usersCountContainer .usersCountValue {
+    font-size: 1.3rem;
+  }
+
+  .usersCountContainer .usersPercentage {
+    font-size: 0.8rem;
+  }
+
+  .usersBarChartContainer {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
+  .usersBarChartContainer canvas {
+    height: 200px !important;
+  }
+
+  .usersBoxgrid {
+    padding: 10px;
+  }
+
+  .usersSearchBar input {
+    padding: 6px 6px 6px 20px;
+    font-size: 0.8rem;
+  }
+
+  .usersSearchIcon {
+    left: 8px;
+    font-size: 0.9rem;
+  }
+
+  .usertableContainer {
+    margin-bottom: 10px;
+  }
+
+  .usersTable {
+    font-size: 0.7rem;
+  }
+
+  .usersTable th,
+  .usersTable td {
+    padding: 4px 6px;
+  }
+
+  .usersPagination {
+    margin-top: 10px;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .usersPagination button {
+    padding: 6px 12px;
+    font-size: 0.8rem;
+    margin: 5px 0;
+  }
+
+  .usersPagination span {
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+}

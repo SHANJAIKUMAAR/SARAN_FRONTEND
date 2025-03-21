@@ -1,0 +1,239 @@
+
+
+.settings {
+    display: flex;
+    min-height: 100vh; 
+    padding: 30px;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 50%, #e3f2fd 100%);
+}
+
+
+.settingsWrapper {
+    flex: 2;
+    padding: 30px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    background-color: #f2f2f2;
+    border: 2px solid #3a1f1f;
+    margin-right: 20px;
+    box-sizing: border-box;
+    height: fit-content; 
+}
+
+.settingsTitle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.settingsUpdateTitle {
+    font-size: 24px;
+    font-weight: 800;
+    color: #d9534f;
+}
+
+.settingsForm {
+    display: flex;
+    flex-direction: column;
+}
+
+.settingsPP {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.settingsPP > img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #090101;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+}
+
+.settingsPPIcon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(78, 194, 78);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-left: 10px;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #2ecc71;
+}
+
+
+
+.settingsForm > label {
+    margin-bottom: 5px;
+    font-weight: 600;
+    color: #2c3e50;
+    font-size: 17px;
+}
+
+.settingsForm > input {
+    width: calc(100% - 22px); 
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #886363;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+.settingsSubmit {
+    padding: 10px 25px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: fit-content;
+    margin: 0 auto;
+    display: block;
+}
+
+.settingsSubmit:hover {
+    background-color: white;
+    color: black;
+    border: 2px solid #a71a1a;
+}
+
+#fileInput {
+    display: none;
+}
+
+
+.updateSuccessMessageSet {
+    color: rgb(255, 0, 0);
+    text-align: center;
+    margin-top: 10px;
+    opacity: 1;
+    font-weight: 300;
+    transition: opacity 1s ease-out;
+  }
+  
+  .updateSuccessMessageSet.fade-out {
+    opacity: 0;
+  }
+
+
+  /* Responsive */
+  @media (max-width: 768px) { /* Medium screens and smaller */
+    .settings {
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+  
+    .settingsWrapper {
+      flex: 1;
+      margin-right: 0;
+      margin-bottom: 20px;
+      width: 90%;
+      padding: 20px;
+    }
+  
+    .settingsForm > input {
+      width: calc(100% - 22px);
+    }
+  
+    .sidebar {
+      width: 90%;
+    }
+  
+    .settingsUpdateTitle {
+      font-size: 22px;
+    }
+  
+    .settingsForm > label {
+      font-size: 16px;
+    }
+  
+    .settingsForm > input,
+    .settingsSubmit {
+      font-size: 15px;
+      padding: 8px;
+    }
+  
+    .settingsPP > img {
+      width: 120px;
+      height: 120px;
+    }
+  
+    .settingsPPIcon {
+      width: 25px;
+      height: 25px;
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 480px) { /* Small screens and smaller */
+    .settings {
+      padding: 10px;
+    }
+  
+    .settingsWrapper {
+      padding: 15px;
+      width: 95%;
+    }
+  
+    .settingsForm > input {
+      width: calc(100% - 22px);
+      margin-bottom: 15px;
+    }
+  
+    .sidebar {
+      width: 95%;
+    }
+  
+    .settingsUpdateTitle {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+  
+    .settingsForm > label {
+      font-size: 14px;
+      margin-bottom: 3px;
+    }
+  
+    .settingsForm > input,
+    .settingsSubmit {
+      font-size: 14px;
+      padding: 8px 15px;
+    }
+  
+    .settingsPP {
+      margin-bottom: 15px;
+    }
+  
+    .settingsPP > img {
+      width: 100px;
+      height: 100px;
+    }
+  
+    .settingsPPIcon {
+      width: 20px;
+      height: 20px;
+      font-size: 14px;
+      margin-left: 8px;
+    }
+  
+    .updateSuccessMessageSet {
+      font-size: 12px;
+    }
+  }
+  

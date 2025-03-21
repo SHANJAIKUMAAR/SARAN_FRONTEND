@@ -1,0 +1,333 @@
+.filterFilterPosts {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background: white;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.filterHead {
+  display: block;
+  width: fit-content;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #b5c2c5;
+  color: #212121;
+  border-radius: 8px;
+  border-color: 2px solid #000000;
+  font-weight: 600;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  margin-bottom: 80px;
+}
+
+
+.filterFilters {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.filterFilters select {
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  width: 180px;
+  cursor: pointer;
+  font-weight: bold;
+  color: #333;
+}
+
+.filterFilters select:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.3);
+  outline: none;
+}
+
+
+.filterPostsContainer {
+  display: grid;
+  gap: 30px;
+  padding: 50px;
+  max-width: 1000px;
+  margin: 0 auto; 
+  border: 2px solid #6b755d; 
+  border-radius: 10px;
+  background: #aad1b2; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.filterMessageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh; 
+  text-align: center;
+}
+
+
+.filterLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #3498db; 
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.8); 
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  animation: fadeInOut 2s infinite alternate; 
+  position: relative; 
+}
+
+/* Spinner Animation */
+.filterLoading::before {
+  content: '';
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(52, 152, 219, 0.3); 
+  border-top-color: #3498db;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0.7; }
+  100% { opacity: 1; }
+}
+
+/* Error Message */
+.filterError {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem; 
+  color: #fff;
+  font-weight: 600; 
+  background: linear-gradient(135deg, #e74c3c, #c0392b); 
+  padding: 18px 30px; 
+  border-radius: 12px; 
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25); 
+  text-align: center;
+  animation: errorPulse 1.5s infinite alternate; 
+}
+
+@keyframes errorPulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.03); }
+}
+
+/* No Posts */
+.filterNoPostsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff9f0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f0e0d0;
+}
+
+.filterNoPostsEmoji {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #e6a157;
+}
+
+.filterNoPostsMessage {
+  font-size: 1.1em;
+  color: #777;
+  max-width: 300px;
+}
+
+
+.filterPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.filterPagination button {
+  padding: 11px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.filterPagination button:hover {
+  background: #72b04f;
+}
+
+.filterPagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.filterPagination span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 12px 15px; 
+  background-color: #ab9494; 
+  color: #333; 
+  border-radius: 5px; 
+}
+
+
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .filterHead {
+    margin-bottom: 60px;
+  }
+
+  .filterFilters {
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 40px;
+  }
+
+  .filterFilters select {
+    width: 45%;
+    padding: 10px;
+    font-size: 0.9rem;
+  }
+
+  .filterPostsContainer {
+    padding: 30px;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .filterPagination button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .filterPagination span {
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 10px 12px;
+  }
+
+  .filterLoading {
+    font-size: 1.3rem;
+    padding: 15px 25px;
+  }
+
+  .filterLoading::before {
+    width: 30px;
+    height: 30px;
+    border: 3px solid rgba(52, 152, 219, 0.3);
+    border-top-color: #3498db;
+  }
+
+  .filterError {
+    font-size: 1.1rem;
+    padding: 15px 25px;
+  }
+
+  .filterNoPostsContent {
+    padding: 20px;
+  }
+
+  .filterNoPostsEmoji {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .filterNoPostsMessage {
+    font-size: 1em;
+  }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+  .filterHead {
+    margin-bottom: 40px;
+  }
+
+  .filterFilters {
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
+  }
+
+  .filterFilters select {
+    width: 90%;
+    padding: 8px;
+    font-size: 0.8rem;
+    margin-bottom: 10px;
+  }
+
+  .filterPostsContainer {
+    padding: 20px;
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .filterPagination button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .filterPagination span {
+    font-size: 14px;
+    margin: 0 8px;
+    padding: 8px 10px;
+  }
+
+  .filterLoading {
+    font-size: 1rem;
+    padding: 10px 20px;
+  }
+
+  .filterLoading::before {
+    width: 25px;
+    height: 25px;
+    border: 3px solid rgba(52, 152, 219, 0.3);
+    border-top-color: #3498db;
+    margin-bottom: 10px;
+  }
+
+  .filterError {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .filterNoPostsContent {
+    padding: 15px;
+  }
+
+  .filterNoPostsEmoji {
+    font-size: 2em;
+    margin-bottom: 8px;
+  }
+
+  .filterNoPostsMessage {
+    font-size: 0.9em;
+  }
+}

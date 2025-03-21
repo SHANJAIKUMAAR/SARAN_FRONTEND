@@ -1,0 +1,552 @@
+.mypostContainer {
+  padding: 20px;
+  background: #f8f9fa;
+  min-height: 100vh;
+  font-family: "Arial", sans-serif;
+}
+
+.mypostTitle {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #343a40;
+  font-size: 28px;
+  margin-bottom: 70px;
+}
+
+.mypostInnerContainer {
+  display: grid;
+  grid-template-rows: auto auto auto auto;
+  gap: 20px;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 3px solid #ddd;
+}
+
+.mypostTotalPosts {
+  background: linear-gradient(to right, #6a5acd, #483d8b);
+  color: #ffffff;
+  padding: 30px;
+  border-radius: 15px; 
+  margin: 20px auto;
+  width: fit-content;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15); 
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.mypostTotalPosts:hover {
+  transform: translateY(-8px); 
+  box-shadow: 0 8px 14px rgba(0, 0, 0, 0.2); 
+}
+
+.mypostTotalPosts span {
+  font-size: 25px; 
+  font-weight: bold;
+}
+
+.mypostSearchContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.mypostSearchWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.mypostSearchInput {
+  padding: 10px 8px 10px 30px;
+  border: 2px solid #4d6f8d;
+  border-radius: 30px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.mypostSearchInput:focus {
+  border-color: #007bff;
+}
+
+.mypostSearchIcon {
+  position: absolute;
+  left: 10px;
+  color: #4d6f8d;
+  pointer-events: none;
+  transition: color 0.3s;
+}
+
+.mypostSearchIcon:hover {
+  color: #111b24;
+}
+
+.mypostBulkDeleteButton {
+  padding: 8px 20px;
+  background: #dc3545;
+  color: white;
+  border: 2px solid black;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.mypostBulkDeleteButton:hover {
+  background: white;
+  color: black;
+  border-color: 2px solid #007bff;
+}
+
+.mypostTableContainer {
+  overflow-x: auto;
+  margin-bottom: 20px;
+}
+
+.mypostTable {
+  width: 100%;
+  border-collapse: collapse;
+  background: rgb(179, 151, 151);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2.5px solid #a88383;
+}
+
+.mypostTable th,
+.mypostTable td {
+  padding: 0 70px;
+  border-bottom: 1px solid #aa9292;
+  border-right: 1px solid #aa9292;
+  text-align: left;
+  font-size: 14px;
+  white-space: nowrap;
+  height: 35px;
+}
+
+.mypostTable th {
+  background-color: #007bff;
+  color: white;
+  font-weight: bold;
+  text-align: center; 
+  vertical-align: middle; 
+}
+
+
+.mypostTable tr:nth-child(even) {
+  background-color: #eef5ff;
+}
+
+.mypostTable tr:nth-child(odd) {
+  background-color: #babdc2;
+}
+
+.mypostTable td input[type="checkbox"] {
+  transform: scale(1.3);
+  cursor: pointer;
+}
+
+.mypostPagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.mypostPagination button {
+  padding: 11px 24px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+.mypostPagination button:hover {
+  background: #72b04f;
+}
+
+.mypostPagination button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.mypostPagination span {
+  font-size: 18px;
+  font-weight: bold;
+  margin-left: 15px;
+  margin-right: 15px;
+  padding: 12px 15px; 
+  background-color: #ab9494; 
+  color: #333; 
+  border-radius: 5px; 
+}
+
+.mypostActionLink,
+.mypostDeleteButton,
+.writelink {
+  cursor: pointer;
+  text-decoration: none;
+  margin: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 10px;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.mypostActionLink {
+  color: #4171a4;
+}
+
+.mypostActionLink:hover {
+  color: #0056b3;
+  background-color: #e0f7fa;
+  border-color: #007bff;
+}
+
+.mypostDeleteButton {
+  color: #9d3d47;
+}
+
+.mypostDeleteButton:hover {
+  color: #fb0019;
+  background-color: #ffebee;
+  border-color: #cd1123;
+}
+
+.writelink {
+  color: #258084;
+}
+
+.writelink:hover {
+  color: #1f3b59;
+  background-color: #e0f7fa;
+  border-color: #007bff;
+}
+
+.mypostStatus.approved {
+  color: #004d00; 
+  font-weight: bold;
+}
+
+.mypostStatus.rejected {
+  color: #ff0707; 
+  font-weight: bold;
+}
+
+.mypostStatus.pending {
+  color: #d97706; 
+  font-weight: bold;
+}
+
+.mypostRejectionReason {
+  color: #7b00ff; 
+  font-weight: bold;
+}
+
+/* Loading Spinner */
+.mypostLoading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  font-size: 1.2em;
+  color: #555;
+}
+
+.mypostSpinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: #09f;
+  animation: spin 1s linear infinite;
+  margin-bottom: 10px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* No Posts Available Style */
+.mypostNoPosts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+}
+
+.mypostNoPostsContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  background-color: #fff9f0;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  border: 2px solid #f0e0d0;
+}
+
+.mypostNoPostsEmoji {
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #e6a157;
+}
+
+.mypostNoPostsMessage {
+  font-size: 1.1em;
+  color: #777;
+  max-width: 300px;
+}
+
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+  .mypostContainer {
+    padding: 15px;
+  }
+
+  .mypostTitle {
+    font-size: 24px;
+    margin-bottom: 50px;
+  }
+
+  .mypostInnerContainer {
+    grid-template-rows: auto auto auto;
+    gap: 15px;
+    padding: 15px;
+    border-width: 2px;
+  }
+
+  .mypostTotalPosts {
+    padding: 20px;
+    border-radius: 12px;
+    margin: 15px auto;
+  }
+
+  .mypostTotalPosts span {
+    font-size: 20px;
+  }
+
+  .mypostSearchContainer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+
+  .mypostSearchWrapper {
+    width: 100%;
+  }
+
+  .mypostSearchInput {
+    padding: 8px 8px 8px 30px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .mypostSearchIcon {
+    left: 8px;
+    font-size: 16px;
+  }
+
+  .mypostBulkDeleteButton {
+    padding: 8px 15px;
+    font-size: 14px;
+    width: 100%;
+  }
+
+  .mypostTable th,
+  .mypostTable td {
+    padding: 8px 15px;
+    font-size: 12px;
+    height: auto;
+  }
+
+  .mypostPagination button {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .mypostPagination span {
+    font-size: 16px;
+    margin: 0 10px;
+    padding: 10px 12px;
+  }
+
+  .mypostActionLink,
+  .mypostDeleteButton,
+  .writelink {
+    padding: 4px 8px;
+    font-size: 12px;
+  }
+
+  .mypostLoading {
+    font-size: 1rem;
+    height: 150px;
+  }
+
+  .mypostSpinner {
+    width: 30px;
+    height: 30px;
+    border-width: 3px;
+    margin-bottom: 8px;
+  }
+
+  .mypostNoPostsContent {
+    padding: 20px;
+  }
+
+  .mypostNoPostsEmoji {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  .mypostNoPostsMessage {
+    font-size: 0.9em;
+    max-width: 90%;
+  }
+}
+
+/* Responsive Design for Mobile Phones */
+@media (max-width: 480px) {
+  .mypostContainer {
+    padding: 10px;
+  }
+
+  .mypostTitle {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .mypostInnerContainer {
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+    padding: 10px;
+    border-width: 1px;
+  }
+
+  .mypostTotalPosts {
+    padding: 15px;
+    border-radius: 10px;
+    margin: 10px auto;
+  }
+
+  .mypostTotalPosts span {
+    font-size: 16px;
+  }
+
+  .mypostSearchContainer {
+    gap: 8px;
+  }
+
+  .mypostSearchInput {
+    padding: 6px 6px 6px 25px;
+    font-size: 12px;
+  }
+
+  .mypostSearchIcon {
+    left: 6px;
+    font-size: 14px;
+  }
+
+  .mypostBulkDeleteButton {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .mypostTable {
+    border-width: 1.5px;
+  }
+
+  .mypostTable th,
+  .mypostTable td {
+    padding: 6px 10px;
+    font-size: 10px;
+    white-space: normal;
+    word-break: break-word;
+    height: auto;
+  }
+
+  .mypostTable th:nth-child(3), /* Hide Author */
+  .mypostTable td:nth-child(3),
+  .mypostTable th:nth-child(4), /* Hide Email */
+  .mypostTable td:nth-child(4),
+  .mypostTable th:nth-child(6), /* Hide Event Type 1 */
+  .mypostTable td:nth-child(6),
+  .mypostTable th:nth-child(7), /* Hide Event Type 2 */
+  .mypostTable td:nth-child(7),
+  .mypostTable th:nth-child(8), /* Hide Student Year */
+  .mypostTable td:nth-child(8),
+  .mypostTable th:nth-child(9), /* Hide Image */
+  .mypostTable td:nth-child(9) {
+    display: none;
+  }
+
+  .mypostPagination {
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  .mypostPagination button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .mypostPagination span {
+    font-size: 14px;
+    padding: 8px 10px;
+    background-color: #eee;
+    border-radius: 4px;
+  }
+
+  .mypostActionLink,
+  .mypostDeleteButton,
+  .writelink {
+    padding: 3px 6px;
+    font-size: 10px;
+  }
+
+  .mypostLoading {
+    font-size: 0.9rem;
+    height: 120px;
+  }
+
+  .mypostSpinner {
+    width: 24px;
+    height: 24px;
+    border-width: 3px;
+    margin-bottom: 6px;
+  }
+
+  .mypostNoPostsContent {
+    padding: 15px;
+  }
+
+  .mypostNoPostsEmoji {
+    font-size: 2em;
+    margin-bottom: 8px;
+  }
+
+  .mypostNoPostsMessage {
+    font-size: 0.8em;
+    max-width: 95%;
+  }
+}
